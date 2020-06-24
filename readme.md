@@ -43,4 +43,8 @@ Tests:
   Exact Change:
   - When the machine cannot return change, prompt user to enter exact change.
 
-
+Things to make:
+- User Inventory
+- Stock Management
+- Change Management
+- Ability to input stock and change on startup or use defaults.
