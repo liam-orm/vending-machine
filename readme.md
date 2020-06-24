@@ -25,24 +25,36 @@ Features/Todos/Reminders
   Exact Change:
   - When the machine cannot return change, prompt the user EXACT CHANGE ONLY
 
-Tests:
-  Inventory:
-  - Should be able to track the users recieved products
-  - Should be able to track the users current balance
+Classes:
+  Bank:
+  - AvaliableBalance
+  - TransactionBalance
+  Coin:
+  - Name
+  - Size
+  - Weight
+  - Value
 
-  Stock:
-  - Should be able to list all avaliable products
-  - Should be able to list remaining quantity of given product
+
+Tests: (Ideas on what I could test.)
+  InventoryService:
+  - Should be store the users recieved products
+  - Should be store the users coin balance.
+  - Should be able to update the users products
+  - Should be able to update the users coin balance.
+
+  StockService:
+  - Should be able to return the current quantity of a prodct
   - Should be able to give a user a product
 
-  Bank:
-  - Should be able to list avaliable machine balance
-  - Should be able to list current transaction balance (users coins they have inserted)
+  Vender:
   - Should be able to check whether USER_COINS is greater than or equal to REQUIRED_COINS.
   - Should be able to return exact change.
   - Should be able to return the users coins.
+  - Should be able to update avaliable balance after a user as recieved their product
+  - Should be able to update transaction balance after a user as entered their coins
 
-  Coins:
+  CoinService:
   - Should be able to check a coins value by weight and size, by string
   - Should be able to tell the Bank a coin has been entered.
 
