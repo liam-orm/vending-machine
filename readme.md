@@ -34,6 +34,12 @@ Classes:
   - Size
   - Weight
   - Value
+  UserInventory:
+  - Products
+  - Balance
+  Products: (Array)
+  - Name
+  - Price
 
 
 Tests: (Ideas on what I could test.)
