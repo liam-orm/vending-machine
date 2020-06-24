@@ -26,22 +26,26 @@ Features/Todos/Reminders
   - When the machine cannot return change, prompt the user EXACT CHANGE ONLY
 
 Tests:
-  Coin:
-  - A coin can be entered.
-  - Coins can be ejected.
-  - Can get coin weight and size by String name.
-  Product:
-  - When product is selected return price.
-  - Product can be dispensed. (Maybe have a user inventory?)
-  - When current coins inserted isn't equal to or greater than price of product, return change remaining.
-  Change:
-  - Change can be returned (User inventory) Exact amount returned.
-  Return Coins:
-  - The machine will return all entered coins.
-  Sold Out:
-  - Machine will alert user that a product is sold out.
-  Exact Change:
-  - When the machine cannot return change, prompt user to enter exact change.
+  Inventory:
+  - Should be able to track the users recieved products
+  - Should be able to track the users current balance
+
+  Stock:
+  - Should be able to list all avaliable products
+  - Should be able to list remaining quantity of given product
+  - Should be able to give a user a product
+
+  Bank:
+  - Should be able to list avaliable machine balance
+  - Should be able to list current transaction balance (users coins they have inserted)
+  - Should be able to check whether USER_COINS is greater than or equal to REQUIRED_COINS.
+  - Should be able to return exact change.
+  - Should be able to return the users coins.
+
+  Coins:
+  - Should be able to check a coins value by weight and size, by string
+  - Should be able to tell the Bank a coin has been entered.
+
 
 Things to make:
 - User Inventory
