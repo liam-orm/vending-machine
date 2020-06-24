@@ -43,24 +43,24 @@ Tests: (Ideas on what I could test.)
   - Should be able to update the users products
   - Should be able to update the users coin balance.
 
+  BankService:
+  - Should be able to say if change is can be returned.
+  - Should be able to return the users coins.
+  - Should be able to return exact change.
+
   StockService:
   - Should be able to return the current quantity of a prodct
   - Should be able to give a user a product
 
-  Vender:
+  SaleService:
   - Should be able to check whether USER_COINS is greater than or equal to REQUIRED_COINS.
-  - Should be able to return exact change.
-  - Should be able to return the users coins.
   - Should be able to update avaliable balance after a user as recieved their product
   - Should be able to update transaction balance after a user as entered their coins
+  - Should be able to calculate change
 
   CoinService:
   - Should be able to check a coins value by weight and size, by string
   - Should be able to tell the Bank a coin has been entered.
 
-
-Things to make:
-- User Inventory
-- Stock Management
-- Change Management
-- Ability to input stock and change on startup or use defaults.
+  Display:
+  - Should be able to output a message to the user.
