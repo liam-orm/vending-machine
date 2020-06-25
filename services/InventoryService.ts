@@ -2,14 +2,25 @@ import { Products } from '../classes/Products'
 import { Item } from '../classes/Item'
 
 class InventoryService {
-  products: Products = { Items: [] }
+  products: Products = { Items: []}
   balance: number;
   coins: string[];
 
   StoreItem (item: Item) : boolean {
+    let i = this.products.Items.findIndex(x => x.Name.toLowerCase() === item.Name.toLowerCase())
+
+    if (i >= 0) {
+      this.products.Items[i].Quantity += 1
+    } else {
+      item.Quantity = 1
+      this.products.Items.push(item)
+    }
+
+    let j = this.products.Items.findIndex(x => x.Name.toLowerCase() === item.Name.toLowerCase())
+
     this.products.Items.push(item);
 
-    console.log(`Recieved product: ${item.Name}`)
+    console.log(`Recieved product: ${item.Name} | Quantity: ${this.products.Items[j].Quantity}`)
 
     return true;
   }
