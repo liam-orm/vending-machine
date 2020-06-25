@@ -13,6 +13,17 @@ function calculateBalance(balance: Array<Coin>): number {
   return total
 };
 
+function getCoinByName(itemName: string) : Coin {
+  switch (itemName.toLowerCase()) {
+    case 'dime':
+      return new Coin(2.26, 1.8);
+    case 'nickel':
+      return new Coin(5, 2.1)
+    case 'quarter':
+      return new Coin(5.6, 2.4)
+  }
+}
+
 function calculateCoins(amount: number): Array<Coin> {
   let coinsToReturn: Array<Coin> = [];
   let typesOfCoin: Array<ICoin> = [
@@ -55,5 +66,6 @@ function calculateCoins(amount: number): Array<Coin> {
 
 export {
   calculateBalance,
-  calculateCoins
+  calculateCoins,
+  getCoinByName
 }

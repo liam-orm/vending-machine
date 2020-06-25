@@ -38,6 +38,8 @@ describe('Bank Service', () => {
 
     const initialBalance: number = calculateBalance(InventoryService.coins)
 
+    BankService.SetBalance(5000)
+
     BankService.ReturnChange(changeToReturn)
 
     const newBalance: number = calculateBalance(InventoryService.coins)

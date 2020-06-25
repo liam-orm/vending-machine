@@ -11,6 +11,10 @@ class SaleService {
   CalculateChange (enteredCoins: Array<Coin>, requestedItem: Item) {
     return calculateBalance(enteredCoins) - requestedItem.Price
   }
+
+  CalculateRemaining (enteredCoins: Array<Coin>, requestedItem: Item) {
+    return requestedItem.Price - calculateBalance(enteredCoins)
+  }
 }
 
 const saleService = new SaleService()

@@ -34,6 +34,10 @@ class InventoryService {
     return calculateBalance(this.coins)
   }
 
+  GetCoins () : Array<Coin> {
+    return this.coins
+  }
+
   AddCoins (coins: Array<Coin>) {
     coins.forEach(coin => {
       this.coins.push(coin)
