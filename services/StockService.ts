@@ -2,6 +2,8 @@ import { Products } from '../classes/Products'
 
 import { startingProducts } from '../data/startingProducts'
 
+import InventoryService from './InventoryService'
+
 class StockService {
   products: Products = startingProducts
 
@@ -21,6 +23,18 @@ class StockService {
     let i : number = this.findIndex(itemName)
 
     return this.products.Items[i].Quantity <= 0
+  }
+
+  Release (itemName: string) {
+    let i : number = this.findIndex(itemName)
+
+    let chosenItem = this.products.Items[i]
+
+    chosenItem.Quantity -= 1
+
+    InventoryService.StoreItem(chosenItem)
+
+    console.log(`Chosen Item: ${chosenItem.Name} has been released`)
   }
 
 
