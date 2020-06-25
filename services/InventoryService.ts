@@ -4,7 +4,7 @@ import { Coin } from '../classes/Coin'
 
 class InventoryService {
   products: Products = { Items: []}
-  balance: Array<Coin> = [];
+  coins: Array<Coin> = [];
 
   StoreItem (item: Item) : boolean {
     let i = this.products.Items.findIndex(x => x.Name.toLowerCase() === item.Name.toLowerCase())
