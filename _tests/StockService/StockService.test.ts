@@ -7,7 +7,7 @@ import StockService from '../../services/StockService'
   StockService:
   - Should be able to return the current quantity of a product | DONE
   - Should be able to say if a product is sold out.
-  - Should be able to give a user a product
+  - Should be able to release a product
 
 */
 
@@ -33,5 +33,17 @@ describe('StockService', () => {
     soldOut = StockService.IsSoldOut(testName)
 
     expect(soldOut).to.be.true
+  });
+
+  it('Should be able to release a product', () => {
+    const testName = 'Candy'
+
+    let preReleaseQuantity : number = StockService.GetQuantity(testName)
+
+    StockService.Release('Candy')
+
+    let postReleaseQuantity : number = StockService.GetQuantity(testName)
+
+    expect(postReleaseQuantity).to.be.equal(preReleaseQuantity - 1)
   });
 });
