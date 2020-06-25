@@ -8,12 +8,6 @@ import { Coin } from '../../classes/Coin'
 
 import { calculateBalance } from '../../helpers/coinHelper'
 
-/*
-  InventoryService:
-  - Should be store the users recieved products | DONE
-  - Should be store the users coin balance.
-*/
-
 describe('InventoryService', () => {
   it('Should be store the users recieved products', () => {
     const item = { Name: 'Candy', Price: .65} as Item;
@@ -36,10 +30,6 @@ describe('InventoryService', () => {
     const newCoins = InventoryService.coins;
     const newBalance = calculateBalance(newCoins)
 
-    console.log({newBalance})
-    console.log({initialBalance})
-
-    // expect(newCoins.length).to.be.greaterThan(initialCoins.length)
     expect(newBalance).to.be.greaterThan(initialBalance)
   });
 });
