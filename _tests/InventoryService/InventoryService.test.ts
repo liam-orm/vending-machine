@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import InventoryService from '../../services/InventoryService'
 
 import { Item } from '../../classes/Item'
-import inventoryService from '../../services/InventoryService';
 
 /*
   InventoryService:
