@@ -1,10 +1,10 @@
 import { Products } from '../classes/Products'
 import { Item } from '../classes/Item'
+import { Coin } from '../classes/Coin'
 
 class InventoryService {
   products: Products = { Items: []}
-  balance: number;
-  coins: string[];
+  balance: Array<Coin> = [];
 
   StoreItem (item: Item) : boolean {
     let i = this.products.Items.findIndex(x => x.Name.toLowerCase() === item.Name.toLowerCase())
