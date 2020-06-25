@@ -1,3 +1,5 @@
+I use readme's as personal note, feel free to take a read.
+
 Notes:
 - Use TDD (Never done this before, Red/Green Testing, write unit tests first.)
 - Write in Typescript.
