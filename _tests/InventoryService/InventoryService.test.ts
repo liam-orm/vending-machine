@@ -8,8 +8,6 @@ import { Item } from '../../classes/Item'
   InventoryService:
   - Should be store the users recieved products | DONE
   - Should be store the users coin balance.
-  - Should be able to update the users products
-  - Should be able to update the users coin balance.
 */
 
 describe('InventoryService', () => {

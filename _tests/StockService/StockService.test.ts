@@ -2,15 +2,6 @@ import { expect } from "chai";
 
 import StockService from '../../services/StockService'
 
-/*
-
-  StockService:
-  - Should be able to return the current quantity of a product | DONE
-  - Should be able to say if a product is sold out.
-  - Should be able to release a product
-
-*/
-
 describe('StockService', () => {
   it('Should be able to return the current quantity of a product', () => {
     const testQuantity = 5;

@@ -20,7 +20,7 @@ class InventoryService {
 
     this.products.Items.push(item);
 
-    console.log(`Recieved product: ${item.Name} | Quantity: ${this.products.Items[j].Quantity}`)
+    console.log(`Recieved product: ${item.Name} | New Quantity: ${this.products.Items[j].Quantity}`)
 
     return true;
   }
