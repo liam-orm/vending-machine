@@ -1,23 +1,26 @@
 import { expect } from 'chai'
 
+import InventoryService from '../../services/InventoryService'
+
+import { Item } from '../../classes/Item'
+import inventoryService from '../../services/InventoryService';
+
 /*
   InventoryService:
-  - Should be store the users recieved products
+  - Should be store the users recieved products | DONE
   - Should be store the users coin balance.
   - Should be able to update the users products
   - Should be able to update the users coin balance.
 */
 
-import { expect } from "chai";
-
 describe('InventoryService', () => {
   it('Should be store the users recieved products', () => {
+    const item = { Name: 'Candy', Price: .65} as Item;
 
-    // create classes and interfaces.
-    let Product = {};
-    let userInventory = { products: [] };
-    InventoryService.store(Product);
+    InventoryService.StoreItem(item);
 
-    expect(userInventory.products.includes(Product)).to.be.true;
+    let Stock = InventoryService.GetStock();
+
+    expect(Stock.Items.includes(item)).to.be.true;
   });
 });

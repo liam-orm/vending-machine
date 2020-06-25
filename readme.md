@@ -16,9 +16,12 @@ Classes:
   UserInventory:
   - Products
   - Balance
-  Products: (Array)
+  Stock: (Array)
+  - Items
+  Item:
   - Name
   - Price
+  - Quantity
 
 
 Tests: (Ideas on what I could test.)
