@@ -1,6 +1,7 @@
 import { Products } from '../classes/Products'
 import { Item } from '../classes/Item'
 import { Coin } from '../classes/Coin'
+import { calculateBalance } from '../helpers/coinHelper'
 
 class InventoryService {
   products: Products = { Items: []}
@@ -27,6 +28,16 @@ class InventoryService {
 
   GetProducts () : Products {
     return this.products
+  }
+
+  GetBalance () : number {
+    return calculateBalance(this.coins)
+  }
+
+  AddCoins (coins: Array<Coin>) {
+    coins.forEach(coin => {
+      this.coins.push(coin)
+    })
   }
 };
 

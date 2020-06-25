@@ -1,18 +1,10 @@
 import { expect } from "chai";
 
-import BankService from '../../services/BankService'
-
-import { calculateBalance } from '../../helpers/balanceCalculator'
-
-import InventoryService from '../../services/InventoryService'
+import { calculateBalance } from '../../helpers/coinHelper'
 import { Coin } from "../../classes/Coin";
 
-/*
-  BankService:
-  - Should be able to say if change can be returned. | DONE
-  - Should be able to return the users coins. | DONE
-  - Should be able to return exact change.
-*/
+import BankService from '../../services/BankService'
+import InventoryService from '../../services/InventoryService'
 
 describe('Bank Service', () => {
   it('Should be able to say if change can be returned', () => {
@@ -29,7 +21,7 @@ describe('Bank Service', () => {
   });
 
   it('Should be able to return the users entered coins', () => {
-    const sampleCoins : Array<Coin> = [new Coin(5.6, 2.4), new Coin(5.6, 2.4)] // Two Quarters, 50c
+    const sampleCoins: Array<Coin> = [new Coin(5.6, 2.4), new Coin(5.6, 2.4)] // Two Quarters, 50c
     const intialUserCoinCount: number = InventoryService.coins.length
 
     BankService.transactionBalance = sampleCoins

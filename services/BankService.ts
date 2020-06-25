@@ -2,6 +2,8 @@ import { Coin } from '../classes/Coin'
 
 import InventoryService from './InventoryService'
 
+import { calculateCoins } from '../helpers/coinHelper'
+
 class BankService {
   balance: number;
   transactionBalance: Array<Coin> = [];
@@ -15,15 +17,16 @@ class BankService {
     return this.balance > this.minChangeAmount
   }
 
+  ReturnChange (changeToReturn: number) {
+    InventoryService.AddCoins(calculateCoins(changeToReturn))
+  }
+
   CancelTransaction () {
     console.log('Cancelling transaction')
-    InventoryService.balance.concat(this.transactionBalance)
 
-    this.transactionBalance.forEach(coin => {
-      InventoryService.balance.push(coin)
-      console.log(`Returning coin: ${coin.name}`)
-    })
-    console.log(InventoryService.balance)
+    InventoryService.AddCoins(this.transactionBalance)
+
+    console.log(InventoryService.coins)
   }
 }
 

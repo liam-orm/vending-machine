@@ -25,18 +25,16 @@ Classes:
 
 
 Tests: (Ideas on what I could test.)
-  InventoryService:
+  InventoryService: DONE
   - Should be store the users recieved products
   - Should be store the users coin balance.
 
-  BankService:
+  BankService: DONE
   - Should be able to say if change is can be returned.
   - Should be able to return the users coins.
   - Should be able to return exact change.
-  - Should be able to update avaliable balance
-  - Should be able to update transaction balance
 
-  StockService:
+  StockService: DONE
   - Should be able to return the current quantity of a product
   - Should be able to give a user a product
   - Should be able to say if a product is sold out.

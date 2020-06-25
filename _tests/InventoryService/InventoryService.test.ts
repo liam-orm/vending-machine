@@ -4,6 +4,10 @@ import InventoryService from '../../services/InventoryService'
 
 import { Item } from '../../classes/Item'
 
+import { Coin } from '../../classes/Coin'
+
+import { calculateBalance } from '../../helpers/coinHelper'
+
 /*
   InventoryService:
   - Should be store the users recieved products | DONE
@@ -19,5 +23,23 @@ describe('InventoryService', () => {
     let UsersProducts = InventoryService.GetProducts();
 
     expect(UsersProducts.Items.includes(item)).to.be.true;
+  });
+
+  it('Should be able to store the users coin balance', () => {
+    const initialCoins = InventoryService.coins;
+    const initialBalance = calculateBalance(initialCoins)
+
+    let coinsToAdd: Array<Coin> = [new Coin(5.6, 2.4), new Coin(5.6, 2.4)]
+
+    InventoryService.AddCoins(coinsToAdd)
+
+    const newCoins = InventoryService.coins;
+    const newBalance = calculateBalance(newCoins)
+
+    console.log({newBalance})
+    console.log({initialBalance})
+
+    // expect(newCoins.length).to.be.greaterThan(initialCoins.length)
+    expect(newBalance).to.be.greaterThan(initialBalance)
   });
 });
