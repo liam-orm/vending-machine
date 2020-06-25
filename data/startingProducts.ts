@@ -4,17 +4,17 @@ export const startingProducts : Products = {
   Items: [
     {
       Name: 'Candy',
-      Price: .65,
+      Price: 65,
       Quantity: 4
     },
     {
       Name: 'Cola',
-      Price: 1,
+      Price: 100,
       Quantity: 2
     },
     {
       Name: 'Chips',
-      Price: .5,
+      Price: 50,
       Quantity: 1
     }
   ]

@@ -22,7 +22,7 @@ describe('Bank Service', () => {
 
   it('Should be able to return the users entered coins', () => {
     const sampleCoins: Array<Coin> = [new Coin(5.6, 2.4), new Coin(5.6, 2.4)] // Two Quarters, 50c
-    const intialUserCoinCount: number = InventoryService.coins.length
+    const initialUserCoinCount: number = InventoryService.coins.length
 
     BankService.transactionBalance = sampleCoins
 
@@ -30,18 +30,20 @@ describe('Bank Service', () => {
 
     const userCoinCount: number = InventoryService.coins.length
 
-    expect(userCoinCount).to.be.greaterThan(intialUserCoinCount)
+    expect(userCoinCount).to.be.greaterThan(initialUserCoinCount)
   })
 
   it('Should be able to return change', () => {
-    const changeToReturn = .35
+    const changeToReturn = 35
 
-    const intialBalance: number = calculateBalance(InventoryService.coins)
+    const initialBalance: number = calculateBalance(InventoryService.coins)
 
     BankService.ReturnChange(changeToReturn)
 
     const newBalance: number = calculateBalance(InventoryService.coins)
 
-    expect(newBalance).to.be.equal(intialBalance + changeToReturn)
+    const amountChanged = newBalance - initialBalance
+
+    expect(amountChanged).to.be.equal(changeToReturn)
   })
 });

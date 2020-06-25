@@ -36,7 +36,7 @@ function calculateCoins(amount: number): Array<Coin> {
     }
   ]
 
-  let tempValue = amount * 100 // Turning into whole numbers, because .35 - .10 = 0.24999999999999997
+  let tempValue = amount
 
   let i = 0;
 

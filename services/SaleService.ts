@@ -7,6 +7,10 @@ class SaleService {
   Compare (enteredCoins: Array<Coin>, requestedItem: Item) {
     return calculateBalance(enteredCoins) - requestedItem.Price >= 0
   }
+
+  CalculateChange (enteredCoins: Array<Coin>, requestedItem: Item) {
+    return calculateBalance(enteredCoins) - requestedItem.Price
+  }
 }
 
 const saleService = new SaleService()

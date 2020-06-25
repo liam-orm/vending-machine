@@ -4,6 +4,7 @@
   "description": "Notes: - Use TDD (Never done this before, Red/Green Testing, write unit tests first.) - Write in Typescript. - Console App. - 2 Hours Max.",
   "main": "index.js",
   "scripts": {
+    "start": "tsc index.ts; node index.js",
     "test": "mocha -r ts-node/register _tests/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
   },
@@ -17,5 +18,9 @@
     "nyc": "^15.1.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "prompt": "^1.0.0",
+    "prompts": "^2.3.2"
   }
 }

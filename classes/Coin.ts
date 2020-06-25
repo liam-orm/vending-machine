@@ -15,7 +15,7 @@ export class Coin implements ICoin {
       case 1.8:
         if (weight === 2.26) {
           this.name = 'Dime';
-          this.value = .10;
+          this.value = 10;
         } else {
           this.name = 'INVALID COIN'
           this.value = 0
@@ -24,7 +24,7 @@ export class Coin implements ICoin {
       case 2.1:
         if (weight === 5) {
           this.name = 'Nickel';
-          this.value = .05;
+          this.value = 5;
         } else {
           this.name = 'INVALID COIN'
           this.value = 0
@@ -33,7 +33,7 @@ export class Coin implements ICoin {
       case 2.4:
         if (weight === 5.6) {
           this.name = 'Quarter';
-          this.value = .25;
+          this.value = 25;
         } else {
           this.name = 'INVALID COIN'
           this.value = 0
