@@ -18,8 +18,8 @@ describe('InventoryService', () => {
 
     InventoryService.StoreItem(item);
 
-    let Stock = InventoryService.GetStock();
+    let UsersProducts = InventoryService.GetProducts();
 
-    expect(Stock.Items.includes(item)).to.be.true;
+    expect(UsersProducts.Items.includes(item)).to.be.true;
   });
 });

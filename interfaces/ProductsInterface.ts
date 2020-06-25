@@ -1,5 +1,5 @@
 import { IItem } from './ItemInterface'
 
-export interface IStock {
+export interface IProducts {
   Items: Array<IItem>;
 }

@@ -1,21 +1,21 @@
-import { Stock } from '../classes/Stock'
+import { Products } from '../classes/Products'
 import { Item } from '../classes/Item'
 
 class InventoryService {
-  stock: Stock = { Items: [] }
+  products: Products = { Items: [] }
   balance: number;
   coins: string[];
 
   StoreItem (item: Item) : boolean {
-    this.stock.Items.push(item);
+    this.products.Items.push(item);
 
     console.log(`Recieved product: ${item.Name}`)
 
     return true;
   }
 
-  GetStock () : Stock {
-    return this.stock
+  GetProducts () : Products {
+    return this.products
   }
 };
 
