@@ -1,6 +1,9 @@
 How to setup:
+
 1: Clone project
+
 2: Run `npm install` inside the project directory
+
 3: Run `npm run start` which will build the typescript portion and then run it using node
 
 I use readme's as personal note, feel free to take a read.
