@@ -37,4 +37,22 @@ describe('Sale Service', () => {
 
     expect(change).to.be.equal(preCalculatedChange)
   });
+
+  it('Should be able to calculate the remaining profit', () => {
+    const coinsToAdd: Array<Coin> = [new Coin(5.6, 2.4), new Coin(5.6, 2.4), new Coin(5.6, 2.4), new Coin(5.6, 2.4)] // 75
+
+    BankService.transactionBalance = coinsToAdd
+
+    console.log({coinsToAdd})
+
+    console.log(BankService.transactionBalance)
+
+    const requestedItem = StockService.GetProduct('Candy') // 65
+
+    const remaining = SaleService.CalculateRemaining(BankService.transactionBalance, requestedItem)
+
+    const preCalculatedRemaining = -35
+
+    expect(remaining).to.be.equal(preCalculatedRemaining)
+  })
 });

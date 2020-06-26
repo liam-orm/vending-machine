@@ -32,4 +32,13 @@ describe('InventoryService', () => {
 
     expect(newBalance).to.be.greaterThan(initialBalance)
   });
+
+  it ('Should be able to get the users coins via function', () => {
+    InventoryService.coins = [new Coin(5.6, 2.4), new Coin(5.6, 2.4)]
+
+    const coins: Array<Coin> = InventoryService.GetCoins()
+
+    expect(coins.length).to.be.equal(2)
+
+  })
 });
