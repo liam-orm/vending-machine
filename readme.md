@@ -6,6 +6,10 @@ How to setup:
 
 3: Run `npm run start` which will build the typescript portion and then run it using node
 
+4: Run `npm run test` which will run the tests using mocha and chai
+
+5: Run `npm run coverage` which will display test coverage using nyc
+
 I use readme's as personal note, feel free to take a read.
 
 Notes:
