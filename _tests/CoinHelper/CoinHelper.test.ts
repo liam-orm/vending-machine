@@ -4,9 +4,13 @@ import { Coin } from '../../classes/Coin';
 
 describe('Coin Helper', () => {
   it('Should be able to return the correct coin by a given string', () => {
-    const coin: Coin = getCoinByName('Dime')
+    const dime: Coin = getCoinByName('Dime')
+    const nickel: Coin = getCoinByName('Nickel')
+    const quarter: Coin = getCoinByName('Quarter')
 
-    expect(coin.value).to.equal(10)
+    expect(dime.value).to.equal(10)
+    expect(nickel.value).to.equal(5)
+    expect(quarter.value).to.equal(25)
   });
 
   it('Should be able to calculate balance from a given array of coins', () => {
