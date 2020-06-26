@@ -202,7 +202,6 @@ class VendingMachine {
 
   async Cancel () {
     BankService.CancelTransaction()
-    // todo
     this.AnotherPurchase();
   }
 }
